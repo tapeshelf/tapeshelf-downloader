@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf Video Downloader"
+  },
+  "description": {
+    "message": "Download videos from any site as one file that plays, in the quality you pick, free. Keep the ones you love on tapeshelf."
+  },
+  "actionTitle": {
+    "message": "Download video"
+  },
+  "commandDownload": {
+    "message": "Download the page's video"
+  },
+  "commandSave": {
+    "message": "Save the page's video to My shelf"
+  }
+}

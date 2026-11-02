@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: pobieranie filmów"
+  },
+  "description": {
+    "message": "Pobieraj za darmo filmy z każdej strony w jednym pliku gotowym do odtworzenia, w wybranej jakości. Ulubione – na półce tapeshelf."
+  },
+  "actionTitle": {
+    "message": "Pobierz film"
+  },
+  "commandDownload": {
+    "message": "Pobierz film z tej strony"
+  },
+  "commandSave": {
+    "message": "Zapisz film z tej strony na mojej półce"
+  }
+}

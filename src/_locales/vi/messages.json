@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: tải video"
+  },
+  "description": {
+    "message": "Tải video từ mọi trang web thành một tệp phát được, chất lượng tùy chọn, miễn phí. Giữ video yêu thích trên kệ tapeshelf của bạn."
+  },
+  "actionTitle": {
+    "message": "Tải video xuống"
+  },
+  "commandDownload": {
+    "message": "Tải video của trang xuống"
+  },
+  "commandSave": {
+    "message": "Lưu video của trang lên kệ của tôi"
+  }
+}

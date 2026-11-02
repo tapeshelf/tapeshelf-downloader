@@ -1,0 +1,108 @@
+/* The history: the settings page's column, a list of finished videos. */
+#app {
+  display: grid;
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+.head {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.title {
+  font-size: 24px;
+}
+.section-title {
+  text-transform: uppercase;
+}
+.card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid var(--vs-line);
+  border-radius: var(--radius-lg);
+  background: var(--vs-surface);
+}
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.tools .control {
+  flex: 1 1 240px;
+}
+.hint {
+  color: var(--vs-text-muted);
+  font-size: 13px;
+}
+.empty {
+  padding: 16px;
+  border: 2px dashed var(--vs-border-strong);
+  border-radius: var(--radius-lg);
+  color: var(--vs-text-muted);
+  font-size: 13px;
+}
+.entries {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.entry {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border: 2px solid var(--vs-line);
+  border-radius: var(--radius-lg);
+  background: var(--vs-surface);
+}
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--vs-surface-2);
+  color: var(--vs-text-faint);
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.entry-text {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.entry-name {
+  overflow: hidden;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.entry-actions {
+  display: inline-flex;
+}
+.error {
+  color: var(--vs-danger);
+}
+.done {
+  color: var(--vs-success);
+}
+@media (max-width: 520px) {
+  .entry {
+    grid-template-columns: 1fr;
+  }
+  .entry .thumb {
+    display: none;
+  }
+}

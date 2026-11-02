@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: Videos herunterladen"
+  },
+  "description": {
+    "message": "Lade Videos von jeder Website gratis herunter: eine abspielbare Datei in Wunschqualität. Lieblinge kommen ins tapeshelf-Regal."
+  },
+  "actionTitle": {
+    "message": "Video herunterladen"
+  },
+  "commandDownload": {
+    "message": "Video der Seite herunterladen"
+  },
+  "commandSave": {
+    "message": "Video der Seite in mein Regal speichern"
+  }
+}

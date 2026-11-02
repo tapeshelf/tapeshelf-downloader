@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: ladda ner video"
+  },
+  "description": {
+    "message": "Ladda ner video från alla webbplatser som en spelbar fil, i vald kvalitet och gratis. Spara favoriterna på din tapeshelf-hylla."
+  },
+  "actionTitle": {
+    "message": "Ladda ner video"
+  },
+  "commandDownload": {
+    "message": "Ladda ner sidans video"
+  },
+  "commandSave": {
+    "message": "Spara sidans video på min hylla"
+  }
+}

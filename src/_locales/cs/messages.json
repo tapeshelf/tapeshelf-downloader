@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: stáhnout video"
+  },
+  "description": {
+    "message": "Stahujte zdarma videa z libovolného webu jako jeden přehratelný soubor ve zvolené kvalitě. Oblíbená si dejte na polici tapeshelf."
+  },
+  "actionTitle": {
+    "message": "Stáhnout video"
+  },
+  "commandDownload": {
+    "message": "Stáhnout video ze stránky"
+  },
+  "commandSave": {
+    "message": "Uložit video ze stránky na moji polici"
+  }
+}

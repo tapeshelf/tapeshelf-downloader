@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: 동영상 다운로드"
+  },
+  "description": {
+    "message": "어느 사이트의 동영상이든 바로 재생되는 파일 하나로, 원하는 화질로 무료 다운로드. 좋아하는 동영상은 내 tapeshelf 선반에."
+  },
+  "actionTitle": {
+    "message": "동영상 다운로드"
+  },
+  "commandDownload": {
+    "message": "페이지의 동영상 다운로드"
+  },
+  "commandSave": {
+    "message": "페이지의 동영상을 내 선반에 저장"
+  }
+}

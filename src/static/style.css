@@ -1,0 +1,390 @@
+/*
+ * The extension's popup and settings in tapeshelf's look: paper and ink,
+ * orange buttons with an ink edge that lift onto a hard shadow, ink-framed fields, the same
+ * fonts and sizes as the app. The dark theme follows the browser's.
+ */
+:root {
+  color-scheme: light;
+  --vs-canvas: #f4f3ee;
+  --vs-surface: #ffffff;
+  --vs-surface-2: #ebeae3;
+  --vs-ink: #171717;
+  --vs-line: #171717;
+  --vs-border: rgb(23 23 23 / 0.16);
+  --vs-border-strong: #171717;
+  --vs-text: #171717;
+  --vs-text-muted: #5f625d;
+  --vs-text-faint: #696c66;
+  --vs-shelf: #d1e4db;
+  --vs-accent: #fc753e;
+  --vs-accent-hover: #ee6128;
+  --vs-accent-text: #b3420f;
+  --vs-accent-fg: #171717;
+  --vs-accent-edge: #171717;
+  --vs-accent-soft: rgb(252 117 62 / 0.16);
+  --vs-danger: #b13322;
+  --vs-success: #196944;
+  --vs-shadow-color: #171717;
+  --vs-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23171717' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3.5 8.5 3 3 6-7'/%3E%3C/svg%3E");
+  --vs-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23171717' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+  --font-sans: 'Golos Text Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Unbounded Variable', 'Golos Text Variable', ui-sans-serif, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --vs-canvas: #0e0e0f;
+    --vs-surface: #070708;
+    --vs-surface-2: #131315;
+    --vs-ink: #d6d5d0;
+    --vs-line: #4a4a4f;
+    --vs-border: rgb(255 255 255 / 0.1);
+    --vs-border-strong: #68676c;
+    --vs-text: #d9d8d3;
+    --vs-text-muted: #a19f99;
+    --vs-text-faint: #8f8d88;
+    --vs-shelf: #1a1a1d;
+    --vs-accent: #f07e4f;
+    --vs-accent-hover: #f6926a;
+    --vs-accent-text: #f59a72;
+    --vs-accent-fg: #0e0e0f;
+    --vs-accent-edge: #b8572f;
+    --vs-accent-soft: rgb(240 126 79 / 0.16);
+    --vs-danger: #ef8170;
+    --vs-success: #63c49d;
+    --vs-shadow-color: #000000;
+    --vs-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%230e0e0f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3.5 8.5 3 3 6-7'/%3E%3C/svg%3E");
+    --vs-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23d9d8d3' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+  }
+}
+
+/* Vietnamese: Golos has no Vietnamese letters; the system face keeps each word whole. */
+:lang(vi) {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+}
+
+*
+* before,
+* after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--vs-canvas);
+  color: var(--vs-text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Chrome gives extension pages its own body type (system-ui at 75%): ours is the app's. */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--vs-accent-text);
+  text-underline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--vs-accent);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* The mark and the lowercase wordmark. */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--vs-text);
+  text-decoration: none;
+}
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* A small label like the sticker on a tape spine. */
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: var(--vs-text-muted);
+}
+
+.muted {
+  color: var(--vs-text-muted);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+/* Buttons: outlined, flat; hover lifts onto a hard shadow, pressing sets it back. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  border: 2px solid var(--vs-line);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--vs-text);
+  font: 600 14px/1 var(--font-sans);
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition:
+    transform 0.1s,
+    box-shadow 0.1s,
+    background-color 0.1s;
+}
+.btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 0 var(--vs-shadow-color);
+  background: var(--vs-surface);
+}
+.btn:active:not(:disabled) {
+  transform: none;
+  box-shadow: none;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-primary {
+  border-color: var(--vs-accent-edge);
+  background: var(--vs-accent);
+  color: var(--vs-accent-fg);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--vs-accent-hover);
+}
+.btn-sm {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+.btn-ghost {
+  border-color: transparent;
+  color: var(--vs-text-muted);
+}
+.btn-ghost:hover:not(:disabled) {
+  transform: none;
+  box-shadow: none;
+  background: var(--vs-surface-2);
+  color: var(--vs-text);
+}
+.btn-block {
+  width: 100%;
+}
+.icon-btn {
+  width: 32px;
+  padding: 0;
+}
+
+/* Fields: one look, 40 px high, ink frame, the orange focus shadow. */
+.field {
+  display: grid;
+  gap: 6px;
+}
+.field > span {
+  font-size: 13px;
+  font-weight: 600;
+}
+.control {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 2px solid var(--vs-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--vs-surface);
+  color: var(--vs-text);
+  font: 450 14px/20px var(--font-sans);
+}
+.control:focus-visible {
+  outline: none;
+  box-shadow: 3px 3px 0 0 var(--vs-accent);
+}
+.control[aria-invalid='true'] {
+  border-color: var(--vs-danger);
+}
+textarea.control {
+  height: auto;
+  min-height: 72px;
+  padding-block: 8px;
+  line-height: 1.5;
+  resize: vertical;
+}
+select.control {
+  appearance: none;
+  padding-right: 36px;
+  background: var(--vs-surface) var(--vs-chevron) no-repeat right 11px center / 14px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.control-sm {
+  height: 32px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+select.control-sm {
+  padding-right: 30px;
+  background-position: right 9px center;
+  background-size: 12px;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  border: 2px solid var(--vs-border-strong);
+  border-radius: 4px;
+  background: var(--vs-surface) no-repeat center / 12px;
+  cursor: pointer;
+}
+input[type='checkbox']:checked {
+  background-color: var(--vs-accent);
+  background-image: var(--vs-check);
+}
+input[type='checkbox']:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* Two choices side by side (who sees the video). */
+.segmented {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  border: 2px solid var(--vs-border-strong);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.segmented label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.segmented label + label {
+  border-left: 2px solid var(--vs-border-strong);
+}
+.segmented input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.segmented label:has(input:checked) {
+  background: var(--vs-ink);
+  color: var(--vs-canvas);
+}
+.segmented label:has(input:focus-visible) {
+  outline: 2px solid var(--vs-accent);
+  outline-offset: -4px;
+}
+
+.alert {
+  padding: 10px 12px;
+  border: 2px solid var(--vs-line);
+  border-radius: var(--radius-md);
+  background: var(--vs-surface);
+  font-size: 13px;
+}
+.alert-error {
+  border-color: var(--vs-danger);
+  color: var(--vs-danger);
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--vs-accent);
+  color: var(--vs-accent-fg);
+  font-weight: 700;
+  font-size: 13px;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progress {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--vs-surface-2);
+  overflow: hidden;
+}
+.progress > div {
+  height: 100%;
+  background: var(--vs-accent);
+  transition: width 0.3s;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: color-mix(in srgb, var(--vs-ink) 32%, transparent);
+  background-clip: padding-box;
+}
+
+/* The mark's tile is ink in both themes: a faint edge keeps it apart from a dark page. */
+@media (prefers-color-scheme: dark) {
+  .brand svg > rect:first-child {
+    stroke: rgb(255 255 255 / 0.15);
+  }
+}

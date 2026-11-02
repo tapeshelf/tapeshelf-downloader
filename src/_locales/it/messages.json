@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: scarica video"
+  },
+  "description": {
+    "message": "Scarica gratis video da ogni sito: un unico file pronto da guardare, nella qualità che vuoi. I preferiti sul tuo scaffale tapeshelf."
+  },
+  "actionTitle": {
+    "message": "Scarica video"
+  },
+  "commandDownload": {
+    "message": "Scarica il video della pagina"
+  },
+  "commandSave": {
+    "message": "Salva il video della pagina sul mio scaffale"
+  }
+}

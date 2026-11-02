@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: unduh video"
+  },
+  "description": {
+    "message": "Unduh video gratis dari situs mana pun: satu file siap putar, dalam kualitas pilihan Anda. Simpan favorit di rak tapeshelf Anda."
+  },
+  "actionTitle": {
+    "message": "Unduh video"
+  },
+  "commandDownload": {
+    "message": "Unduh video halaman ini"
+  },
+  "commandSave": {
+    "message": "Simpan video halaman ini ke rak saya"
+  }
+}

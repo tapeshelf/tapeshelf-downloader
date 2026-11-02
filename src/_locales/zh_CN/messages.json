@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf 视频下载器"
+  },
+  "description": {
+    "message": "从任何网站下载视频，合成一个能直接播放的文件，画质自选，免费。喜欢的视频收进你的 tapeshelf 片架。"
+  },
+  "actionTitle": {
+    "message": "下载视频"
+  },
+  "commandDownload": {
+    "message": "下载本页视频"
+  },
+  "commandSave": {
+    "message": "将本页视频保存到我的片架"
+  }
+}

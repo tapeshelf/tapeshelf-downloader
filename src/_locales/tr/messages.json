@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf Video İndirici"
+  },
+  "description": {
+    "message": "Her siteden videoyu oynatılabilir tek dosya olarak, istediğiniz kalitede ücretsiz indirin. Sevdiklerinizi tapeshelf rafınızda tutun."
+  },
+  "actionTitle": {
+    "message": "Videoyu indir"
+  },
+  "commandDownload": {
+    "message": "Sayfadaki videoyu indir"
+  },
+  "commandSave": {
+    "message": "Sayfadaki videoyu rafıma kaydet"
+  }
+}

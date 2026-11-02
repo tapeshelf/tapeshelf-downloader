@@ -1,0 +1,117 @@
+/* The settings page: one column of cards, as the app's settings. */
+#app {
+  display: grid;
+  gap: 16px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+.head {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.title {
+  font-size: 24px;
+}
+.card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid var(--vs-line);
+  border-radius: var(--radius-lg);
+  background: var(--vs-surface);
+}
+.section-title {
+  text-transform: uppercase;
+}
+.sub {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.row .control {
+  flex: 1;
+}
+.who {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.strong {
+  display: block;
+  font-weight: 600;
+}
+.hint {
+  display: block;
+  color: var(--vs-text-muted);
+  font-size: 13px;
+}
+.hint.error {
+  color: var(--vs-danger);
+}
+.check {
+  align-items: flex-start;
+}
+.check input {
+  margin-top: 2px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+kbd {
+  padding: 3px 8px;
+  border: 2px solid var(--vs-line);
+  border-radius: var(--radius-md);
+  font: 600 13px var(--font-mono);
+}
+.privacy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* The fields a file's name is built of: a click puts one in. */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+/* "The shelf": the cards after it are about tapeshelf, not downloading. */
+.part {
+  margin: 8px 0 -4px;
+}
+/* A hint or an example under a field: the text of the hints elsewhere, not the field's label. */
+.field > p {
+  margin: 0;
+}
+/* A site's own file name: the site, its template, remove. */
+.rules {
+  display: grid;
+  gap: 8px;
+}
+.rule {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: 8px;
+  align-items: center;
+}
+.add-rule {
+  justify-self: start;
+}
+/* A choice among several (recording what plays): the radio as round as the checkboxes are square. */
+input[type='radio'] {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--vs-accent);
+}

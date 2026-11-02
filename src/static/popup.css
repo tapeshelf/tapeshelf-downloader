@@ -1,0 +1,328 @@
+/* The popup: 380 px wide, the list scrolls, the button stays in reach. */
+body {
+  width: 380px;
+  min-height: 160px;
+  max-height: 600px;
+}
+/* Opened as a small window (the menu or the shortcut where the popup cannot open). */
+body.window {
+  width: auto;
+  max-height: none;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--vs-line);
+}
+.bar-end {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+main {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+.connect {
+  gap: 12px;
+  padding: 24px 16px 20px;
+}
+
+.list,
+.form {
+  display: grid;
+  gap: 12px;
+}
+.section-title {
+  text-transform: uppercase;
+}
+.empty {
+  padding: 16px;
+  border: 2px dashed var(--vs-border-strong);
+  border-radius: var(--radius-lg);
+  color: var(--vs-text-muted);
+  font-size: 13px;
+}
+
+.items,
+.jobs {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.items {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 4px 4px 0;
+}
+.item-label {
+  display: grid;
+  grid-template-columns: auto 56px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 2px solid var(--vs-line);
+  border-radius: var(--radius-lg);
+  background: var(--vs-surface);
+  cursor: pointer;
+}
+.item-label:has(input:checked) {
+  box-shadow: 3px 3px 0 0 var(--vs-accent);
+}
+.item-off .item-label {
+  cursor: default;
+  opacity: 0.6;
+}
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--vs-surface-2);
+  color: var(--vs-text-faint);
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item-text,
+.job-text {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.item-name {
+  overflow: hidden;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.drm {
+  display: inline-flex;
+  align-items: center;
+}
+
+.actions {
+  display: grid;
+  gap: 8px;
+}
+.count {
+  min-width: 20px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--vs-accent-fg);
+  color: var(--vs-accent);
+  font: 600 11px/16px var(--font-mono);
+}
+
+.form-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.fields {
+  display: grid;
+  gap: 12px;
+}
+.fields-card {
+  padding: 10px;
+  border: 2px solid var(--vs-border);
+  border-radius: var(--radius-lg);
+}
+
+#queue:empty {
+  display: none;
+}
+#queue {
+  display: grid;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 2px solid var(--vs-border);
+}
+.queue-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.job {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+.job-actions {
+  display: inline-flex;
+}
+.job-error {
+  color: var(--vs-danger);
+  font-size: 12px;
+}
+.done {
+  color: var(--vs-success);
+}
+
+/* A newer full build is out. */
+.update {
+  display: grid;
+  gap: 4px;
+  margin: 12px 16px 0;
+  padding: 10px 12px;
+  border: 2px solid var(--vs-line);
+  border-radius: var(--radius-md);
+  background: var(--vs-accent-soft);
+  font-size: 13px;
+}
+.update p {
+  margin: 0;
+}
+.strong {
+  font-weight: 600;
+}
+
+/* However many wait, the list stays in the popup: it scrolls. */
+.jobs {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.queue-count {
+  text-transform: none;
+}
+
+/* Each video's quality with its size: under its name, the size of the details line. */
+.quality {
+  max-width: 100%;
+  margin-top: 3px;
+}
+.actions .btn svg {
+  margin-right: 6px;
+}
+
+/* A text button inside a line: looks like the links around it. */
+.link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--vs-accent-text);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+/* The line about the shelf under the newest download: closable for good. */
+.shelf-hint {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 4px 8px 10px;
+  border: 2px dashed var(--vs-border-strong);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+.shelf-hint p {
+  margin: 0;
+}
+
+/* A video on its way to the shelf, among the downloads. */
+.job-to {
+  display: inline-flex;
+  margin-right: 6px;
+  color: var(--vs-text-muted);
+  vertical-align: -1px;
+}
+.all-history {
+  justify-self: start;
+}
+
+/* The page's other videos: a quiet line, closed; the likeliest one stays above it. */
+.more summary {
+  width: fit-content;
+  cursor: pointer;
+}
+.more summary:hover {
+  color: var(--vs-text);
+}
+.more[open] summary {
+  margin-bottom: 8px;
+}
+.items-more {
+  max-height: 240px;
+}
+
+/* "Download" and, beside it, "MP3". */
+.download-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+/*
+ * Recording: a live stream's card and the card of "Record what plays". Pressed, the
+ * same card shows the recording and its two buttons, side by side, the same width.
+ */
+.live {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 8px;
+}
+.item-label-live {
+  grid-template-columns: 56px 1fr;
+}
+/* Two buttons side by side, the same width; a label too long for half the card takes a row. */
+.pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pair > .btn {
+  flex: 1 1 0;
+  min-width: max-content;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+.pair .btn svg,
+.record-card .btn svg {
+  margin-right: 6px;
+}
+.rec-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 999px;
+  background: var(--vs-danger);
+  vertical-align: 0;
+}
+.record-card {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 2px solid var(--vs-line);
+  border-radius: var(--radius-lg);
+  background: var(--vs-surface);
+}
+.record-card .btn-block svg {
+  color: var(--vs-danger);
+}
+.record-lead,
+.recording {
+  margin: 0;
+  font-size: 13px;
+}
+.recording {
+  font-weight: 600;
+}

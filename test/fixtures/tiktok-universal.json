@@ -1,0 +1,77 @@
+{
+  "__DEFAULT_SCOPE__": {
+    "webapp.video-detail": {
+      "statusCode": 0,
+      "itemInfo": {
+        "itemStruct": {
+          "id": "7000000000000000001",
+          "desc": "Sea at dawn #sea\nfilmed on the pier",
+          "author": { "uniqueId": "seaside" },
+          "video": {
+            "width": 576,
+            "height": 1024,
+            "duration": 13,
+            "cover": "https://p16-sign.tiktokcdn.com/cover.jpg",
+            "originCover": "https://p16-sign.tiktokcdn.com/origin.jpg",
+            "playAddr": "https://v16-webapp-prime.tiktok.com/video/play/",
+            "bitrateInfo": [
+              {
+                "CodecType": "h264",
+                "Bitrate": 1200000,
+                "PlayAddr": {
+                  "UrlList": [
+                    "https://www.tiktok.com/aweme/v1/play/?x=1",
+                    "https://v16-webapp-prime.tiktok.com/video/h264-720/"
+                  ],
+                  "DataSize": "2400000",
+                  "Width": 720,
+                  "Height": 1280,
+                  "UrlKey": "v1_h264_720p"
+                }
+              },
+              {
+                "CodecType": "h265_hvc1",
+                "Bitrate": 900000,
+                "PlayAddr": {
+                  "UrlList": ["https://v16-webapp-prime.tiktok.com/video/h265-720/"],
+                  "DataSize": "1800000",
+                  "Width": 720,
+                  "Height": 1280,
+                  "UrlKey": "v1_bytevc1_720p"
+                }
+              },
+              {
+                "CodecType": "h265_hvc1",
+                "Bitrate": 2000000,
+                "PlayAddr": {
+                  "UrlList": ["https://v16-webapp-prime.tiktok.com/video/h265-1080/"],
+                  "DataSize": "4000000",
+                  "Width": 1080,
+                  "Height": 1920,
+                  "UrlKey": "v1_bytevc1_1080p"
+                }
+              },
+              {
+                "CodecType": "bytevc2",
+                "PlayAddr": {
+                  "UrlList": ["https://v16-webapp-prime.tiktok.com/video/vvc/"],
+                  "Width": 1080,
+                  "Height": 1920,
+                  "UrlKey": "v1_bytevc2_1080p"
+                }
+              },
+              {
+                "CodecType": "h265_hvc1",
+                "PlayAddr": {
+                  "UrlList": ["https://v16-webapp-prime.tiktok.com/video/media-video-hvc1/"],
+                  "Width": 540,
+                  "Height": 960
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf : télécharger des vidéos"
+  },
+  "description": {
+    "message": "Téléchargez gratuitement les vidéos de tout site en un fichier lisible, à la qualité voulue. Vos favorites, sur l’étagère tapeshelf."
+  },
+  "actionTitle": {
+    "message": "Télécharger la vidéo"
+  },
+  "commandDownload": {
+    "message": "Télécharger la vidéo de la page"
+  },
+  "commandSave": {
+    "message": "Enregistrer la vidéo de la page sur mon étagère"
+  }
+}

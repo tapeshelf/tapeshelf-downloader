@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: baixar vídeos"
+  },
+  "description": {
+    "message": "Baixe grátis vídeos de qualquer site em um só arquivo que já toca, na qualidade que quiser. Os favoritos, na sua estante tapeshelf."
+  },
+  "actionTitle": {
+    "message": "Baixar vídeo"
+  },
+  "commandDownload": {
+    "message": "Baixar o vídeo da página"
+  },
+  "commandSave": {
+    "message": "Salvar o vídeo da página na minha estante"
+  }
+}

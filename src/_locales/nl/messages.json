@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf: video downloaden"
+  },
+  "description": {
+    "message": "Download gratis video’s van elke site als één afspeelbaar bestand, in de kwaliteit die je kiest. Favorieten op je tapeshelf-plank."
+  },
+  "actionTitle": {
+    "message": "Video downloaden"
+  },
+  "commandDownload": {
+    "message": "Video van de pagina downloaden"
+  },
+  "commandSave": {
+    "message": "Video van de pagina opslaan op mijn plank"
+  }
+}

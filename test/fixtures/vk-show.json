@@ -1,0 +1,38 @@
+{
+  "payload": [
+    0,
+    [
+      "Пример видео в стиле Кино",
+      "<div id='video_box_wrap-100000001_456000001' class='video_box_wrap'></div>",
+      "\naddTemplates({\"_\":\"_\"});",
+      "<div class=\"mv_info_wide_column\"></div>",
+      {
+        "is_vk_player": true,
+        "mvData": {
+          "title": "Пример видео в стиле &quot;Кино&quot;",
+          "desc": "Новый адрес:<br><a href=\"https://vk.com/example\" mention_id=\"example\">https://vk.com/example</a>",
+          "duration": 60
+        },
+        "player": {
+          "params": [
+            {
+              "md_title": "Пример видео в стиле Кино",
+              "md_author": "Sample Channel",
+              "duration": 60,
+              "jpg": "https://sun9-39.userapi.com/c100000/sampleThumb.jpg",
+              "url144": "https://vkvd423.okcdn.ru/?expires=1&type=4&sig=a",
+              "url240": "https://vkvd423.okcdn.ru/?expires=1&type=0&sig=b",
+              "url360": "https://vkvd423.okcdn.ru/?expires=1&type=1&sig=c",
+              "url480": "https://vkvd423.okcdn.ru/?expires=1&type=2&sig=d",
+              "url720": "https://vkvd423.okcdn.ru/?expires=1&type=3&sig=e",
+              "hls": "https://vkvd423.okcdn.ru/video.m3u8?cmd=videoPlayerCdn&expires=1",
+              "dash_sep": "https://vkvd423.okcdn.ru/?expires=1&type=1&ct=6&sig=f",
+              "first_frame_800": "https://sun9-39.userapi.com/c100000/frame.jpg",
+              "lang_add": "Add"
+            }
+          ]
+        }
+      }
+    ]
+  ]
+}

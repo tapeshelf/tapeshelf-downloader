@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "tapeshelf：動画ダウンロード"
+  },
+  "description": {
+    "message": "どのサイトの動画も、そのまま再生できる1つのファイルに。好きな画質で無料ダウンロード。お気に入りはtapeshelfの棚へ。"
+  },
+  "actionTitle": {
+    "message": "動画をダウンロード"
+  },
+  "commandDownload": {
+    "message": "ページの動画をダウンロード"
+  },
+  "commandSave": {
+    "message": "ページの動画を自分の棚に保存"
+  }
+}
